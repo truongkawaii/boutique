@@ -1,0 +1,34 @@
+.banner {
+    .owl-carousel {
+        overflow: hidden;
+    }
+    .owl-carousel:hover .owl-next {
+        opacity: 1;
+        transform: translateX(0%) translateY(-50%);
+    }
+    .owl-carousel:hover .owl-prev {
+        opacity: 1;
+        transform: translateX(0%) translateY(-50%);
+    }
+    .owl-next {
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        transform: translateX(200%) translateY(-50%);
+        top: 50%;
+    }
+    .owl-prev {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        transform: translateX(-200%) translateY(-50%);
+        top: 50%;
+    }
+    .owl-theme .owl-nav [class*='owl-'] {
+        padding: 7px 10px;
+        transition: 0.4s;
+    }
+    .owl-theme .owl-nav [class*='owl-']:hover {
+        background-color: $xam;
+    }
+}

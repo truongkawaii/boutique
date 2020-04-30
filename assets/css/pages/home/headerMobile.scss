@@ -1,0 +1,122 @@
+.wrapper .showmobile {
+    transform: translateX(0%);
+}
+
+.header__mobile {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    transition: 0.3s;
+    transform: translateX(-100%);
+    background-color: rgba(0, 0, 0, 0.938);
+    overflow: auto;
+    .list__mobile {
+        padding-top: 3rem;
+        padding-left: 3rem;
+    }
+    li:first-child {
+        margin: 0;
+        a {
+            color: white;
+            font-size: 12px;
+        }
+    }
+    .list--mobile {
+        &>a {
+            font-weight: bold;
+            color: white;
+            font-size: 12px;
+            padding: 1.2rem 0;
+        }
+        width: 100%;
+        border-bottom: 1px solid rgb(155, 152, 152);
+        padding: 1.5rem 0 1.5rem 0;
+        margin-left: 3rem;
+        &:hover .mega-mobile {
+            display: block;
+        }
+        .mega-mobile {
+            display: none;
+            background-color: rgb(255, 255, 255);
+            .mega--item {
+                padding: 1.5rem 0 1.5rem 1.5rem;
+                width: 100%;
+                border-bottom: 1px dashed $xam;
+                a {
+                    font-weight: bold;
+                    font-size: 13px;
+                    padding: 1.5rem 0;
+                    color: rgba(53, 53, 53, 0.938);
+                }
+                a:hover {
+                    text-decoration: none;
+                    color: $xam;
+                }
+            }
+        }
+    }
+    .clickOut {
+        position: absolute;
+        top: 1.5rem;
+        right: 3rem;
+        h3 {
+            cursor: pointer;
+            padding: 0.5rem 1.3rem;
+            font-weight: 500;
+            border: 1px solid rgb(255, 255, 255);
+            color: white;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.humberger {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    cursor: pointer;
+    .line {
+        margin-top: 0.5rem;
+        width: 2rem;
+        height: 2px;
+        background-color: rgba(53, 53, 53, 0.938);
+    }
+}
+
+@include min-breakpoint(768) {
+    .fixed2 {
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        .header__logo {
+            display: none;
+        }
+        .menu--list {
+            flex: 1;
+        }
+        .header__menu {
+            @include box-shadow(3px, 2px, 3px, 1px, #ccc);
+            margin-top: 0;
+            padding: 2rem 1.2rem;
+        }
+    }
+}
+
+@include breakpoint(767) {
+    .humberger {
+        display: block;
+    }
+    .container {
+        min-width: 95%;
+    }
+}

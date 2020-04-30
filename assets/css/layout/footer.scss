@@ -1,0 +1,132 @@
+.footer {
+    background-color: #0B0B0B;
+    &__card {
+        position: relative;
+        padding: 5rem 0;
+        text-align: center;
+        h3 {
+            color: $xam;
+            font-weight: 400;
+            font-size: 12px;
+            font-family: 'Playfair Display', serif;
+        }
+        h2 {
+            font-size: 1.9rem;
+            color: #eeeeee;
+        }
+        img {
+            padding-top: 0.5rem;
+        }
+        p {
+            padding: 2rem 1rem;
+            color: #888888;
+            text-transform: initial;
+            font-size: 14px;
+        }
+        h5 {
+            cursor: pointer;
+            padding: 0.5rem 0;
+            color: #888888;
+            text-transform: initial;
+            font-size: 14px;
+            &:hover {
+                color: $xam;
+            }
+        }
+        .footer-list {
+            padding-top: 3rem;
+        }
+        h4 {
+            font-size: 1.8rem;
+            color: white;
+        }
+        .footer-social {
+            padding-top: 3rem;
+            justify-content: center;
+            display: flex;
+            li {
+                margin: 0.8rem;
+                border-radius: 50%;
+                font-size: 2.5rem;
+                width: 4.2rem;
+                height: 4.2rem;
+                background-color: white;
+            }
+        }
+    }
+    .col-lg-4:last-child {
+        .footer__card {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    &__brand {
+        padding: 3rem 0;
+        border-top: 1px solid rgba(92, 92, 92, 0.527);
+        .footer--brand {
+            li {
+                padding: 0 1.3rem;
+                cursor: pointer;
+                transition: 0.3s;
+                opacity: 0.5;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            display: flex;
+        }
+    }
+}
+
+@include breakpoint(991) {
+    .footer {
+        .footer__brand {
+            .footer--brand {
+                align-items: center;
+                li {
+                    padding: 0 0.5rem;
+                    img {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(350) {
+    .footer {
+        .footer__brand {
+            .footer--brand {
+                align-items: center;
+                li {
+                    padding: 0 0.5rem;
+                    img {
+                        width: 63px;
+                    }
+                }
+            }
+        }
+    }
+    .blog {
+        .blog__card--text>h2 {
+            font-size: 12px;
+        }
+    }
+}
+
+@include min-breakpoint(992) {
+    .footer {
+        &__card {
+            &::before {
+                right: -3rem;
+                position: absolute;
+                content: "";
+                height: 25rem;
+                width: 1px;
+                background-color: rgba(112, 112, 112, 0.301);
+            }
+        }
+    }
+}
